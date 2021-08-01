@@ -1,0 +1,58 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main_activity"
+    android:orientation="vertical"
+    tools:context=".MeetingMain">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark Your Date"
+        android:textAlignment="center"
+        android:id="@+id/MyDate"
+        android:textSize="30sp"
+        android:textColor="#FFF"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center_horizontal"
+        />
+    <LinearLayout
+        android:layout_marginTop="48dp"
+        android:background="@drawable/background_calendar"
+        android:layout_marginLeft="44dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+        <CalendarView
+            android:layout_width="wrap_content"
+            android:layout_height="320dp"
+            >
+
+
+        </CalendarView>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/background_main_activity"
+        android:paddingLeft="20dp"
+        android:paddingTop="3dp"
+        android:paddingRight="20dp"
+        android:text="Save my date"
+        app:backgroundTint="#00BCD4">
+
+    </Button>
+
+
+
+
+
+
+</LinearLayout>
