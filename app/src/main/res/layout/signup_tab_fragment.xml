@@ -9,11 +9,12 @@
         android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/edit_text"
         android:hint="Username"
+        android:minHeight="48dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:background="@drawable/edit_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
@@ -23,39 +24,75 @@
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/company"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Password"
+        android:background="@drawable/edit_text"
+        android:hint="Company"
+        android:minHeight="48dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:background="@drawable/edit_text"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintWidth_percent=".8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username"
-        />
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".8" />
 
-    <Button
-        android:id="@+id/login_btn"
+    <EditText
+        android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text"
+        android:hint="Password"
+        android:minHeight="48dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/company"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".8" />
+
+    <EditText
+        android:id="@+id/confirm_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text"
+        android:hint="Confirm Password"
+        android:minHeight="48dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".8" />
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="@drawable/login_signup_btn"
-        android:text="Login"
+        android:text="Signup"
+        android:textColor="#f57f62"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="#f57f62"
         app:backgroundTint="#62f5d3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".7"
-
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password"
+        app:layout_constraintVertical_bias="0.268"
         app:layout_constraintWidth_percent=".8" />
 
 

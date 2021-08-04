@@ -1,4 +1,4 @@
-package com.example.meetingmanagement;
+package com.example.meetingsmanagement;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
