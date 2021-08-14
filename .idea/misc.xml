@@ -16,12 +16,20 @@
         <entry key="..\:/AndroidProject/app/src/main/res/layout/activity_signup.xml" value="0.2" />
         <entry key="..\:/AndroidProject/app/src/main/res/layout/calendar_view.xml" value="0.2368659420289855" />
         <entry key="..\:/AndroidProject/app/src/main/res/layout/login_tab_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/MeetingManagement/app/src/main/res/drawable/background_calendar.xml" value="0.26615384615384613" />
         <entry key="..\:/MeetingManagement/app/src/main/res/drawable/background_middle.xml" value="0.2703125" />
         <entry key="..\:/MeetingManagement/app/src/main/res/drawable/edit_text.xml" value="0.2703125" />
+        <entry key="..\:/MeetingManagement/app/src/main/res/drawable/ic_lock.xml" value="0.26615384615384613" />
         <entry key="..\:/MeetingManagement/app/src/main/res/drawable/login_signup_btn.xml" value="0.2703125" />
         <entry key="..\:/MeetingManagement/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/MeetingManagement/app/src/main/res/layout/activity_main.xml" value="0.23143115942028986" />
+        <entry key="..\:/MeetingManagement/app/src/main/res/layout/activity_meeting.xml" value="0.25416666666666665" />
+        <entry key="..\:/MeetingManagement/app/src/main/res/layout/calendar_view.xml" value="0.25416666666666665" />
+        <entry key="..\:/MeetingManagement/app/src/main/res/layout/information_tab_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MeetingManagement/app/src/main/res/layout/login_tab_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/MeetingManagement/app/src/main/res/layout/schedule_tab_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MeetingManagement/app/src/main/res/layout/signup_tab_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/MeetingManagement/app/src/main/res/layout/test_layout.xml" value="0.23143115942028986" />
       </map>
     </option>
   </component>

@@ -17,16 +17,16 @@ public class LoginActivity extends AppCompatActivity {
 
     LoginAdapter loginAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_login);
 
         tabLayout = findViewById(R.id.tab_layout);
         viewPager2 = findViewById(R.id.view_pager);
+
 
         FragmentManager fm = getSupportFragmentManager();
         loginAdapter = new LoginAdapter(fm,getLifecycle());
