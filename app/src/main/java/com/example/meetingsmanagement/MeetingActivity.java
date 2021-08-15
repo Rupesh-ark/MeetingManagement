@@ -1,7 +1,10 @@
 package com.example.meetingsmanagement;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -15,7 +18,7 @@ public class MeetingActivity extends AppCompatActivity implements View.OnClickLi
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     MeetingAdapter meetingAdapter;
-
+    Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,7 @@ public class MeetingActivity extends AppCompatActivity implements View.OnClickLi
 
         tabLayout = findViewById(R.id.tab_layout);
         viewPager2 = findViewById(R.id.view_pager);
+        backButton = findViewById(R.id.back_button);
 
         FragmentManager fm = getSupportFragmentManager();
         meetingAdapter = new MeetingAdapter(fm,getLifecycle());
@@ -55,6 +59,15 @@ public class MeetingActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onPageSelected(int position) {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
+            }
+        });
+
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
             }
         });
 

@@ -69,13 +69,13 @@ public class InformationFragment extends Fragment {
                 else{
                     Cursor res = DB.getMeetingData(loginID,date);
                     if(res.getCount()==0) {
-                        Toast.makeText(getActivity(), "No Entry Exists", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "No Meeting on this date", Toast.LENGTH_SHORT).show();
                         return;
                     }
                     StringBuffer buffer = new StringBuffer();
                     while (res.moveToNext()){
                         buffer.append("Meeting Time:" + res.getString(0)+"\n");
-                        buffer.append("Meeting Agenda:" + res.getString(1)+"\n");
+                        buffer.append("Meeting Agenda:" + res.getString(1)+"\n\n");
                     }
 
                     AlertDialog.Builder builder1 = new AlertDialog.Builder(getActivity());
