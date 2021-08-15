@@ -28,6 +28,7 @@ public class MeetingData extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         db.execSQL("drop table if exists Users");
+        db.execSQL("drop table if exists Meetings");
     }
 
     public Boolean insertUsersData(String loginID, String password, String companyName)
@@ -44,7 +45,6 @@ public class MeetingData extends SQLiteOpenHelper {
             return false;
         else
             return true;
-
     }
 
     public Boolean insertMeetingsData(String meetingID,String meetingDate,String meetingTime, String meetingAgenda)
@@ -65,10 +65,28 @@ public class MeetingData extends SQLiteOpenHelper {
 
     }
 
+    public Cursor getMeetingData(String meetingID,String meetingDate)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select meetingTime,meetingAgenda from Meetings where meetingID=? and meetingDate=?",new String[]{meetingID,meetingDate});
+        return cursor;
+
+    }
+
     public Boolean checkUserIDDuplicate(String loginID){
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("select * from Users where loginID=?", new String[] {loginID});
+        if(cursor.getCount()>0)
+            return true;
+        else
+            return false;
+    }
+
+    public Boolean checkMeetingDuplicate(String meetingID,String meetingDate,String meetingTime)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from Meetings where meetingID=? and meetingDate=? and meetingTime=?", new String[] {meetingID,meetingDate,meetingTime});
         if(cursor.getCount()>0)
             return true;
         else

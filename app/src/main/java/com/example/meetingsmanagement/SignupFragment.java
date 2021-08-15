@@ -47,10 +47,10 @@ public class SignupFragment extends Fragment {
                     if(password.equals(confirmPass))
                     {
                         Boolean checkDuplicate = DB.checkUserIDDuplicate(loginID);
-                        if(checkDuplicate==false)
+                        if(!checkDuplicate)
                         {
                             Boolean insert = DB.insertUsersData(loginID,password,companyName);
-                            if(insert == true) {
+                            if(insert) {
 
                                 Toast.makeText(getActivity(), "Registered Successfully", Toast.LENGTH_SHORT).show();
                                    Intent intent = new Intent(getActivity().getApplicationContext(),MeetingActivity.class);
